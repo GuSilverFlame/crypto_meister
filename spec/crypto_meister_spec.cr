@@ -12,7 +12,7 @@ describe CryptoMeister do
     end
 
     it "raises exception when agent type is invalid" do
-      expect_raises(Exception, "AgentTypeUnrecognized") do
+      expect_raises(Exception, IndexError) do
         CryptoMeister.new_agent("password", :wrong_type)
       end
     end
