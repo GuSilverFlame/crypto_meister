@@ -1,5 +1,5 @@
 module CryptoMeister
-  class XorEncryption
+  class XorCipher
 
     @password_value : UInt8
     def initialize(password_string : String)

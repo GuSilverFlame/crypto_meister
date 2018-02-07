@@ -1,11 +1,11 @@
 require "../spec_helper"
 
-subject = CryptoMeister::XorEncryption.new("test")
-describe CryptoMeister::XorEncryption do
+subject = CryptoMeister::XorCipher.new("test")
+describe CryptoMeister::XorCipher do
 
   it "raises exception when password is empty" do
     expect_raises(Exception) do
-      CryptoMeister::XorEncryption.new("")
+      CryptoMeister::XorCipher.new("")
     end
   end
 
