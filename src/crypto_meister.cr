@@ -1,14 +1,10 @@
 require "./crypto_meister/*"
 
 module CryptoMeister
+  #TODO add more encryption agents
+  AGENT_TYPES = {xor: XorEncryption}
   def self.new_agent(password : String, agent_type = :xor)
-    #TODO add more encryption agents and add to case
-    case agent_type
-    when :xor
-      XorEncryption.new(password)
-    else
-      raise "AgentTypeUnrecognized"
-    end
+    AGENT_TYPES[agent_type].new(password)
   end
 
   def self.process_text(text : String, encryption_agent = nil)
