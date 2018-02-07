@@ -11,7 +11,7 @@ describe CryptoMeister::XorCipher do
 
   describe "#process" do
     it "returns an encrypted string" do
-      subject.process("something").should eq "\u0090\u008c\u008e\u0086\u0097\u008b\u008a\u008d\u0084"
+      subject.process("something").should eq "¼ ¢ª»§¦¡¨"
     end
   end
 
