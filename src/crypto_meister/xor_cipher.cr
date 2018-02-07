@@ -4,7 +4,7 @@ module CryptoMeister
     @key_value : UInt8
     def initialize(key_string : String)
       raise "EmptyParameter" if key_string.size == 0
-      @key_value = key_string.bytes.product/key_string.size
+      @key_value = ~(key_string.bytes.product/key_string.size)
     end
 
     def process(content_string : String)
