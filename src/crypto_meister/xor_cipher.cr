@@ -1,19 +1,19 @@
 module CryptoMeister
   class XorCipher
 
-    @password_value : UInt8
-    def initialize(password_string : String)
-      raise "EmptyParameter" if password_string.size == 0
-      @password_value = password_string.bytes.product/password_string.size
+    @key_value : UInt8
+    def initialize(key_string : String)
+      raise "EmptyParameter" if key_string.size == 0
+      @key_value = key_string.bytes.product/key_string.size
     end
 
     def process(content_string : String)
       content = content_string.bytes
-      content.map {|e| (e^password_value).chr}.join
+      content.map {|e| (e^key_value).chr}.join
     end
 
-    private def password_value
-      @password_value
+    private def key_value
+      @key_value
     end
 
   end

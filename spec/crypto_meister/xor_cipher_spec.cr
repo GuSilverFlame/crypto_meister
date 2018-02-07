@@ -3,7 +3,7 @@ require "../spec_helper"
 subject = CryptoMeister::XorCipher.new("test")
 describe CryptoMeister::XorCipher do
 
-  it "raises exception when password is empty" do
+  it "raises exception when key is empty" do
     expect_raises(Exception) do
       CryptoMeister::XorCipher.new("")
     end
