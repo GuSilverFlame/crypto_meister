@@ -1,5 +1,5 @@
 module BlockMacros
-  macro define_block_generator(block_bytes, block_type)
+  macro define_block_operators(block_bytes, block_type)
     private def generate_block_{{block_bytes}}(byte_array)
       result_array = [] of {{block_type}}
       byte_array.each_slice({{block_bytes}}) do |chunk_of_bytes|
