@@ -1,6 +1,6 @@
-# crypto_meister
+# Crypto_meister
 
-a simple low security encryption library
+A simple LOW SECURITY encryption library
 
 ## Contributing
 
